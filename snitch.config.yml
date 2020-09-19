@@ -1,0 +1,8 @@
+provider :
+  region : ca-central-1
+rules :
+
+#VPC
+- aws-vpc-no-default-vpc : {}
+- aws-vpc-flow-logs-are-enabled: {}
+
