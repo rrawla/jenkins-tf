@@ -2,7 +2,7 @@ resource "aws_vpc" "compliance-test" {
   cidr_block = "10.0.0.0/16"
   tags = {
     Name = "compliance vpc",
-    Purpose = "Testing snitch integration"
+    Purpose = "Testing compliance integration"
   }
 }
 data "aws_s3_bucket" "flowlog" {
