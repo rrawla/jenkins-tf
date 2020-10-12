@@ -13,7 +13,8 @@ pipeline {
         }
         stage('init') {
             steps {
-                sh script: 'terraform init'         
+                sh 'cd terraform'
+                sh 'terraform init'         
             }
         }
         stage('validate') {
@@ -21,7 +22,7 @@ pipeline {
                 nodejs('node') {
                     sh 'aws s3 cp s3://rahul.jenkins.test/snitch2-0.5.1.tgz .'
                     sh 'npm install --unsafe-perm -g snitch2-0.5.1.tgz'
-                    sh 'snitch2 static -c ./snitch.config.yml'
+                    sh 'snitch2 static -c ./snitch.config.yml -t terraform'
                 }
                 
             }
@@ -29,7 +30,8 @@ pipeline {
         
         stage('apply') {
             steps {
-                sh script: 'terraform apply --auto-approve'         
+                sh 'cd terraform'
+                sh 'terraform apply --auto-approve'         
             }
         }
     }
