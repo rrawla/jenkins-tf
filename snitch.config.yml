@@ -5,4 +5,14 @@ rules :
 #VPC
 - aws-vpc-no-default-vpc : {}
 - aws-vpc-flow-logs-are-enabled: {}
-
+#DynamoDB
+- aws-dynamodb-encryption :
+    whitelist:
+      - pipeline-services-dev
+- aws-dynamodb-has-required-tags: 
+    tags:
+      - key: env
+        regex: (dev|test|prod)
+- aws-dynamodb-point-in-time-recovery:
+    exclude :
+      - pipeline-services-dev
