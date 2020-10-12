@@ -12,8 +12,9 @@ pipeline {
             }
         }
         stage('init') {
-            steps {
-                sh 'terraform init'         
+            withAWS(role:'pipeline-services-terraform', roleAccount:"005901988046", duration: 900, roleSessionName: 'jenkins-session')
+            {
+              sh 'terraform init'    
             }
         }
         stage('validate') {
