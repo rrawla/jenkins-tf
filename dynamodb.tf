@@ -6,13 +6,14 @@ resource "aws_dynamodb_table" "basic-dynamodb-table" {
   hash_key       = "UserId"
   range_key      = "GameTitle"
   point_in_time_recovery {
-    enabled = false
+    enabled = true
   }
   server_side_encryption {
     enabled = true
   }
   tags = {
     Name = "dynamodb-table-1"
+    env = "dev"
   }
   attribute {
     name = "UserId"
