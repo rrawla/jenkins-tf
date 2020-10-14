@@ -12,8 +12,10 @@ node {
         stage('init') {
               sh 'terraform init'    
         }
-        stage('compliance check') {              
+        stage('compliance check') {
+               nodejs('node') {
                     sh 'snitch2 static -c ./snitch.config.yml'
+                }                
         }
         stage('apply') {
                 sh 'terraform apply --auto-approve' 
