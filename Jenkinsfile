@@ -1,9 +1,4 @@
 node {
-    agent any
-    tools {
-          git 'git'
-          terraform 'terraform'
-        }
     stages {
         stage('init') {
              sh 'aws s3 cp s3://rahul.jenkins.test/snitch2-0.5.1.tgz .'
