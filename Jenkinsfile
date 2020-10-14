@@ -1,5 +1,5 @@
 node {
-    stages {
+    try {
         stage('init') {
              sh 'aws s3 cp s3://rahul.jenkins.test/snitch2-0.5.1.tgz .'
              sh 'npm install --unsafe-perm -g snitch2-0.5.1.tgz'                   
@@ -18,5 +18,11 @@ node {
         stage('apply') {
                 sh 'terraform apply --auto-approve' 
         }
+    }
+    catch(e){
+        throw e
+    }
+    finally {
+        stage("cleanup")
     }
 }
