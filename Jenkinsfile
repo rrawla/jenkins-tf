@@ -3,11 +3,9 @@ node {
         {
            docker.withTool('docker') {  
                 docker.withRegistry('https://005901988046.dkr.ecr.ca-central-1.amazonaws.com/','ecr:ca-central-1:aws-instance-role') {
-                    
+                    docker.image('005901988046.dkr.ecr.ca-central-1.amazonaws.com/matter-compliance').pull('latest')
                 }
-                docker.image('005901988046.dkr.ecr.ca-central-1.amazonaws.com/matter-compliance').pull('latest').inside {
-                    sh 'snitch2'
-                }
+                
            }
         }  
         // stage('checkout') {
