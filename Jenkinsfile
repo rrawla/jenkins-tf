@@ -3,7 +3,7 @@ node {
         {
            docker.withTool('docker') {  
                 docker.withRegistry('https://005901988046.dkr.ecr.ca-central-1.amazonaws.com/','ecr:ca-central-1:aws-instance-role') {
-                    docker.image('005901988046.dkr.ecr.ca-central-1.amazonaws.com/matter-compliance').inside {
+                    docker.image('005901988046.dkr.ecr.ca-central-1.amazonaws.com/matter-compliance:latest').inside {
                         stage('checkout code')
                         {
                             git 'https://github.com/rrawla/jenkins-tf.git'
