@@ -34,9 +34,6 @@ node {
                 
            }
         }
-        stage("clean up")
-        {
-            sh 'terragrunt -v'
-        }  
+       
    
 }
