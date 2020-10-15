@@ -1,5 +1,14 @@
 node {
     try {
+        stage('pull docker image')
+        {
+            docker.withRegistry('https://005901988046.dkr.ecr.ca-central-1.amazonaws.com') {
+            docker.image('matter-compliance').pull('latest').inside {
+                    sh 'snitch2'
+                }
+            }
+        } 
+        } 
         stage('checkout') {
                 git 'https://github.com/rrawla/jenkins-tf.git'
         }
@@ -16,9 +25,9 @@ node {
                     sh 'snitch2 static -c ./snitch.config.yml'
                 }                
         }
-        stage('apply') {
-                sh 'terraform apply --auto-approve' 
-        }
+        // stage('apply') {
+        //         sh 'terraform apply --auto-approve' 
+        // }
     }
     catch(e){
         throw e
