@@ -2,9 +2,7 @@ node {
         stage('pull docker image')
         {
             docker.withRegistry('https://005901988046.dkr.ecr.ca-central-1.amazonaws.com/matter-compliance','ecr:ca-central-1:aws-instance-role') {
-                docker.image('matter-compliance').pull('latest').inside {
-                    sh 'snitch2'
-                }
+                docker.image('matter-compliance').pull('latest')
             }
         }  
         // stage('checkout') {
