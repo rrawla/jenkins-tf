@@ -10,8 +10,10 @@ node {
                         }
                         stage('init state')
                         {
-                            sh 'terraform -v && terragrunt -v && snitch2 -v'
-
+                            sh  'chmod 755 /usr/local/bin/terragrunt'
+                            sh  'terraform -v'
+                            sh  'terragrunt -v'
+                            sh  'snitch2 -v'
                             sh 'terraform init'
                         }
                         stage('validate plan') 
