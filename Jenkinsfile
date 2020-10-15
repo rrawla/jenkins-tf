@@ -2,8 +2,8 @@ node {
         stage('pull docker image')
         {
            docker.withTool('docker') {  
-                docker.withRegistry('https://005901988046.dkr.ecr.ca-central-1.amazonaws.com/matter-compliance','ecr:ca-central-1:aws-instance-role') {
-                    sh 'docker pull matter-compliance:latest'
+                docker.withRegistry('https://005901988046.dkr.ecr.ca-central-1.amazonaws.com/','ecr:ca-central-1:aws-instance-role') {
+                    docker.image('matter-compliance').pull('latest')
                 }
            }
         }  
