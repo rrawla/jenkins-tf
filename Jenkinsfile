@@ -13,7 +13,7 @@ node {
                             sh  'terraform -v'
                             sh  'terragrunt -v'
                             sh  'snitch2 -v'
-                            sh 'terraform init'
+                            sh 'terraform init --reconfigure'
                         }
                         stage('validate plan') 
                         {
