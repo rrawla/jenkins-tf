@@ -10,6 +10,8 @@ node {
                         }
                         stage('init state')
                         {
+                            sh 'terraform -v && terragrunt -v && snitch2 -v'
+
                             sh 'terraform init'
                         }
                         stage('validate plan') 
