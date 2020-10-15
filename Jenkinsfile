@@ -3,8 +3,8 @@ node {
         stage('pull docker image')
         {
             docker.withRegistry('https://005901988046.dkr.ecr.ca-central-1.amazonaws.com') {
-            docker.image('matter-compliance').pull('latest')
-            
+                docker.image('matter-compliance').pull('latest')
+            }
         }  
         stage('checkout') {
                 git 'https://github.com/rrawla/jenkins-tf.git'
