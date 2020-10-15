@@ -7,8 +7,7 @@ node {
                     sh 'snitch2'
                 }
             }
-        } 
-        } 
+        }  
         stage('checkout') {
                 git 'https://github.com/rrawla/jenkins-tf.git'
         }
