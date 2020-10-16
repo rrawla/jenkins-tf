@@ -4,7 +4,7 @@
 # .tfstate files
 *.tfstate
 *.tfstate.*
-*.yml
+
 # Crash log files
 crash.log
 
