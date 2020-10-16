@@ -20,10 +20,7 @@ node {
                             sh 'terraform show -json tgf.plan > tgf.json'
                             sh 'terraform graph > tgf.dot'
                         }
-                        // stage('pull compliance config')
-                        // {
-                        //     sh 'aws s3 cp s3://etrade.compliance.configs/compliance.config.yml .'
-                        // }
+                        
                         stage('run compliance')
                         {
                             sh 'snitch2 static -c compliance.config.yml -p tgf.json -g tgf.dot'
