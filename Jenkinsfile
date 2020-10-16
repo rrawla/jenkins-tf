@@ -23,7 +23,7 @@ node {
                         
                         stage('run compliance')
                         {
-                            sh 'snitch2 static -c compliance.config.yml -p tgf.json -g tgf.dot'
+                            sh 'snitch2 static -c snitch.config.yml -p tgf.json -g tgf.dot'
                         }
                         stage('deploy')
                         {
