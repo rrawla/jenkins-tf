@@ -6,7 +6,7 @@ node {
                     docker.image('005901988046.dkr.ecr.ca-central-1.amazonaws.com/matter-compliance:latest').inside {
                         stage('checkout code')
                         {
-                            git 'https://github.com/rrawla/jenkins-tf.git'
+                            checkout scm
                         }
                         stage('init check')
                         {
