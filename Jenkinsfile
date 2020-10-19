@@ -25,7 +25,8 @@ node {
                         }
                         stage('deploy')
                         {
-                            sh 'terraform apply --auto-approve'
+                            //sh 'terraform apply --auto-approve'
+                            sh 'echo do terraform apply here'
                         }      
                     }
                 }
