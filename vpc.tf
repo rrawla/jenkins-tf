@@ -5,12 +5,12 @@ resource "aws_vpc" "compliance-test" {
     Purpose = "Testing compliance integration"
   }
 }
-# data "aws_s3_bucket" "flowlog" {
-#   bucket = "rahul.jenkins.test"
-# }
-# resource "aws_flow_log" "example" {
-#   log_destination      = data.aws_s3_bucket.flowlog.arn
-#   log_destination_type = "s3"
-#   traffic_type         = "ALL"
-#   vpc_id               = aws_vpc.compliance-test.id
-# }
+data "aws_s3_bucket" "flowlog" {
+  bucket = "rahul.jenkins.test"
+}
+resource "aws_flow_log" "example" {
+  log_destination      = data.aws_s3_bucket.flowlog.arn
+  log_destination_type = "s3"
+  traffic_type         = "ALL"
+  vpc_id               = aws_vpc.compliance-test.id
+}
