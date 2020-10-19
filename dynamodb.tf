@@ -5,9 +5,11 @@ resource "aws_dynamodb_table" "basic-dynamodb-table" {
   write_capacity = 20
   hash_key       = "UserId"
   range_key      = "GameTitle"
-  
-  server_side_encryption {
+  point_in_time_recovery {
     enabled = true
+  }  
+  server_side_encryption {
+    enabled = false
   }
   tags = {
     Name = "dynamodb-table-1"
