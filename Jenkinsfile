@@ -8,13 +8,7 @@ node {
                         {
                             checkout scm
                         }
-                        stage('init check')
-                        {
-                            sh  'terraform -v'
-                            sh  'snitch2 -v'
-                            sh  'terraform init --reconfigure'
-                            sh  'aws --version'
-                        }
+                    
                         stage('validate plan') 
                         {
                             sh 'terraform plan -out=tgf.plan'
