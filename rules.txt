@@ -1,0 +1,141 @@
+Loaded 335 rules from bundle rules.bundle.js (Version: 1.0.0)
+--------------------------------------------------------------------------------
+137 Rules                                                   static    livecheck 
+--------------------------------------------------------------------------------
+aws-athena-workgroup-has-required-tags                      supported           
+aws-cloudformation-stack-exists                             supported supported 
+aws-cloudfront-has-logging-enabled                          supported supported 
+aws-cloudtrail-ensure-log-file-validation                   supported supported 
+aws-cloudtrail-ensure-logging-is-enabled                    supported supported 
+aws-cloudtrail-ensure-s3-bucket-acl-type                    supported supported 
+aws-cloudtrail-is-enabled-in-all-regions                    supported supported 
+aws-cloudtrail-logs-are-encrypted                           supported supported 
+aws-cloudtrail-logs-lifecycle-delete                        supported supported 
+aws-cloudtrail-logs-lifecycle-migrate-to-glacier            supported supported 
+aws-cloudtrail-s3-bucket-deny-delete                                  supported 
+aws-cloudtrail-trails-are-integrated-with-cloudwatch-lo               supported 
+aws-cloudwatch-alarm-exists-for-aws-config-changes                    supported 
+aws-cloudwatch-alarm-exists-for-changes-to-nacl                       supported 
+aws-cloudwatch-alarm-exists-for-changes-to-network-g...               supported 
+aws-cloudwatch-alarm-exists-for-cloudtrail-configura...               supported 
+aws-cloudwatch-alarm-exists-for-disable-or-schedule-...               supported 
+aws-cloudwatch-alarm-exists-for-iam-access-key-creat...               supported 
+aws-cloudwatch-alarm-exists-for-iam-policy-changes                    supported 
+aws-cloudwatch-alarm-exists-for-iam-user-creation                     supported 
+aws-cloudwatch-alarm-exists-for-management-console-a...               supported 
+aws-cloudwatch-alarm-exists-for-route-table-changes                   supported 
+aws-cloudwatch-alarm-exists-for-s3-bucket-policy-cha...               supported 
+aws-cloudwatch-alarm-exists-for-security-group-changes                supported 
+aws-cloudwatch-alarm-exists-for-sign-in-wo-mfa                        supported 
+aws-cloudwatch-alarm-exists-for-unauthorized-api-calls                supported 
+aws-cloudwatch-alarm-exists-for-usage-of-root-account                 supported 
+aws-cloudwatch-alarm-exists-for-vpc-changes                           supported 
+aws-cloudwatch-logs-exports-to-s3-bucket                              supported 
+aws-cloudwatch-logs-are-enabled                                       supported 
+aws-config-service-ensure-cloudtrail-rule-exists                      supported 
+aws-config-service-sends-to-sns                                       supported 
+aws-config-service-specified-rules-are-enabled                        supported 
+aws-config-service-is-enabled-in-current-region                       supported 
+aws-documentdb-instance-has-required-tags                   supported           
+aws-dynamodb-encryption                                     supported supported 
+aws-dynamodb-has-required-tags                              supported           
+aws-dynamodb-point-in-time-recovery                         supported supported 
+aws-ebs-volume-encryption                                   supported supported 
+aws-ec2-ami-includes-sql-server                             supported supported 
+aws-ec2-customer-gateway-has-approved-ip                    supported supported 
+aws-ec2-ensure-instance-profile                             supported supported 
+aws-ec2-has-allowed-keypair                                 supported supported 
+aws-ec2-has-auto-parking-tag                                supported supported 
+aws-ec2-instance-tag-exists                                 supported supported 
+aws-ec2-instance-tag-format                                 supported supported 
+aws-ec2-instances-single-protocol                           supported supported 
+aws-ec2-key-pair-exists                                     supported supported 
+aws-ec2-ami-is-not-windows                                  supported supported 
+aws-ec2-network-acl-allows-inbound                          supported supported 
+aws-ec2-network-acl-allows-outbound                         supported supported 
+aws-ec2-network-acl-does-not-allow-inbound                  supported supported 
+aws-ec2-network-acl-does-not-allow-outbound                 supported supported 
+aws-ec2-has-autoscaling-group                               supported supported 
+aws-ec2-in-private-subnet                                             supported 
+aws-ec2-no-instances                                                  supported 
+aws-efs-has-required-tags                                   supported           
+aws-elasticache-cluster-has-required-tags                   supported           
+aws-elb-has-logging-enabled                                 supported supported 
+aws-elb-uses-tls-endpoint                                   supported supported 
+aws-iam-account-password-policy                             supported supported 
+aws-iam-avoid-use-of-root-account                                     supported 
+aws-iam-custom-policies-have-controlled-scope               supported supported 
+aws-iam-ensure-a-support-role-is-attached                             supported 
+aws-iam-ensure-master-and-manager-roles-are-active                    supported 
+aws-iam-ensure-specified-groups-exist                                 supported 
+aws-iam-ensure-specified-roles-exist                                  supported 
+aws-iam-ensure-specified-users-exist                                  supported 
+aws-iam-groups-have-required-policies                                 supported 
+aws-iam-hardware-mfa-is-enabled-for-root-account                      supported 
+aws-iam-mfa-is-enabled-for-iam-users-with-console-pa...               supported 
+aws-iam-no-initial-access-keys                              supported supported 
+aws-iam-no-passrole-star-policies                           supported supported 
+aws-iam-no-root-account-access-key                                    supported 
+aws-iam-no-user-attached-policies                           supported supported 
+aws-iam-policies-are-least-privileged                       supported supported 
+aws-iam-policies-have-requested-region                                supported 
+aws-iam-roles-have-required-policies                                  supported 
+aws-iam-users-have-required-policies                                  supported 
+aws-iam-virtual-mfa-is-enabled-for-root-account                       supported 
+aws-iam-ensure-access-keys-are-rotated                                supported 
+aws-iam-ensure-unused-credentials-are-disabled                        supported 
+aws-iam-limit-group-actions-to-principals                             supported 
+aws-iam-limit-roles-actions-to-principals                             supported 
+aws-iam-limit-user-actions-to-principals                              supported 
+aws-iam-no-policies-allow-cloudtrail-stop                   supported supported 
+aws-iam-no-policies-use-default-kms-keys                              supported 
+aws-iam-trust-policy-only-allows-one-service                supported supported 
+aws-kinesis-has-required-shard-metrics                      supported supported 
+aws-kms-ensure-key-rotation                                 supported supported 
+aws-lambda-has-required-tags                                supported supported 
+aws-neptune-cluster-has-required-tags                       supported           
+aws-rds-db-instance-backup-is-enabled                       supported supported 
+aws-rds-db-instance-multi-az-enabled                        supported supported 
+aws-rds-db-logging-is-enabled                               supported supported 
+aws-rds-encryption-key-exists                               supported supported 
+aws-rds-has-required-tags                                   supported           
+aws-rds-in-private-subnets                                  supported supported 
+aws-rds-cluster-storage-encrypted                           supported supported 
+aws-rds-parameter-group-has-required-parameters             supported supported 
+aws-rds-instance-storage-encrypted                          supported supported 
+aws-resources-have-description-tag                          supported supported 
+aws-resources-have-environment-tag                          supported supported 
+aws-route53-has-logging-enabled                                       supported 
+aws-route53-no-cloudjack-vulnerabilities                              supported 
+aws-redshift-cluster-has-required-tags                      supported           
+aws-glacier-has-required-tags                               supported           
+aws-s3-bucket-has-required-tags                             supported           
+aws-s3-bucket-cross-region-replication-enabled              supported supported 
+aws-s3-bucket-encryption                                    supported supported 
+aws-s3-bucket-ensure-logging-is-enabled                     supported supported 
+aws-s3-bucket-has-ip-restriction                            supported supported 
+aws-s3-bucket-is-private                                    supported supported 
+aws-s3-bucket-public-access-block                           supported supported 
+aws-s3-bucket-versioning                                    supported supported 
+aws-s3-multi-region-replication                                       supported 
+aws-s3-cloudtrail-bucket-is-not-publicly-accessible                   supported 
+aws-s3-cloudtrail-bucket-access-logging-enabled                       supported 
+aws-s3-uses-https                                           supported supported 
+aws-s3-only-allow-encrypted-objects                                   supported 
+aws-s3-only-allow-specific-roles                                      supported 
+aws-s3-only-allow-specific-groups                                     supported 
+aws-s3-naming-conventions                                   supported           
+aws-security-group-allows-inbound                           supported supported 
+aws-security-group-allows-outbound                          supported supported 
+aws-security-group-does-not-allow-inbound                   supported supported 
+aws-security-group-does-not-allow-outbound                  supported supported 
+aws-sns-ensure-appropriate-subscribers                                supported 
+aws-vpc-default-security-group-restricts-all-traffic                  supported 
+aws-vpc-flow-logs-are-enabled                               supported supported 
+aws-vpc-forensics-vpc-exists                                supported supported 
+aws-vpc-no-default-vpc                                      supported supported 
+aws-vpc-subnets-are-private                                           supported 
+aws-vpc-with-bastion-host-exists                                      supported 
+aws-vpc-has-sns-endpoint                                              supported 
+aws-vpc-routing-tables-for-vpc-peering-are-least-acc...               supported 
+aws-waf-shield-is-enabled                                             supported 
